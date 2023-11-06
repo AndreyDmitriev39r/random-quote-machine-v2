@@ -1,10 +1,13 @@
-import Tilt from "./Tilt"
+import QuoteType from "./components/QuoteType";
+import QuoteBox from "./components/QuoteBox";
+import NewQuote from "./components/NewQuote";
 
 const App = () => {  
   return (
     <>
-      <h1 className="text-2xl">This is Random quote machine</h1>
-      <Tilt />
+      <QuoteType />
+      <QuoteBox />
+      <NewQuote />
     </>
   )
 }
