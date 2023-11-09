@@ -20,7 +20,7 @@
 
 Please, make sure to read through the following documents:
 
-- Our [code of conduct] /* link to code of conduct needed here */
+- Our [code of conduct](./CODE_OF_CONDUCT.md)
 - And [README](./README.md)
 
 ## Issues
