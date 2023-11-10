@@ -1,15 +1,11 @@
-import {useState} from 'react'
+import { FC } from "react";
 
-const QuoteType = () => {
-  const options = [
-    "random quote",
-    "type1 quote",
-    "type2 quote"
-  ];
-  const [quoteType, setQuoteType] = useState(() => options[0]);
+interface QT {  
+  onOptionChangeHandler: (e: React.ChangeEvent<HTMLSelectElement>) => void,
+  options: string[],
+}
 
-  const onOptionChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => setQuoteType(e.target.value);
-
+const QuoteType: FC<QT> = ({onOptionChangeHandler, options}) => {
   return (
     <select name="select" onChange={onOptionChangeHandler}>
       {options.map((option, idx) => <option key={idx}>{option}</option>)}

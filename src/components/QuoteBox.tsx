@@ -1,8 +1,15 @@
-const QuoteBox = () => {
+import { FC } from "react";
+
+interface QB {
+  quoteText: string,
+  quoteAuthor: string
+}
+
+const QuoteBox: FC<QB> = ({quoteText, quoteAuthor}) => {
   return (
     <div className="flex-col gap-2">
-      <p>Quote will go here</p>
-      <p>Author's name will go here</p>
+      <p>{quoteText}</p>
+      <p>{quoteAuthor}</p>
     </div>
   )
 }
