@@ -12,8 +12,8 @@ interface Quote {
 const App = () => {  
 
   const initialQuote = {
-    text: "some initial text",
-    author: "poor silly me"
+    text: "text for quote on initial render",
+    author: "author of initial quote"
   };
 
   const options = [
@@ -33,11 +33,14 @@ const App = () => {
   const handleNewQuoteClick = () => fetchQuote(quoteType);
 
   const fetchQuote = (quoteType: QuoteTypesUnion) => {
-    if (quoteType !== "inspiring") {
-      setQuote({text: "some definitely uninspiring quote", author: "whoever"})
-    } else {
-      // here should be all the fetching thing
+    if (quoteType === "random") {
+      setQuote({text: "random quote text", author: "random quote author"})
+    } else if (quoteType === "inspiring") {      
       setQuote({text: "something from zenquotes", author: "coool folks"})
+    } else if (quoteType === "type1") {
+      setQuote({text: "type1 quote text", author: "type1 quote author"})
+    } else if (quoteType === "type2") {
+      setQuote({text: "type1 quote text", author: "type1 quote author"})
     }
   }
 
