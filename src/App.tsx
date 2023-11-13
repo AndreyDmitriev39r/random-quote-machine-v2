@@ -4,12 +4,17 @@ import QuoteBox from "./components/QuoteBox";
 import QuoteTypeSelect from "./components/QuoteTypeSelect";
 import NewQuoteButton from "./components/NewQuoteButton";
 
+interface Quote {
+  text: string,
+  author: string
+};
+
 const App = () => {  
 
   const initialQuote = {
     text: "some initial text",
     author: "poor silly me"
-  }
+  };
 
   const options = [
     "random",
@@ -21,13 +26,13 @@ const App = () => {
   type QuoteTypesUnion = (typeof options)[number];
 
   const [quoteType, setQuoteType] = useState<QuoteTypesUnion>(() => options[0]);
-  const [quote, setQuote] = useState(() => initialQuote)
+  const [quote, setQuote] = useState<Quote>(() => initialQuote);
 
   const onOptionChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => setQuoteType(e.target.value as QuoteTypesUnion);
 
   const handleNewQuoteClick = () => fetchQuote(quoteType);
 
-  const fetchQuote = (quoteType: string) => {
+  const fetchQuote = (quoteType: QuoteTypesUnion) => {
     if (quoteType !== "inspiring") {
       setQuote({text: "some definitely uninspiring quote", author: "whoever"})
     } else {
@@ -53,4 +58,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
