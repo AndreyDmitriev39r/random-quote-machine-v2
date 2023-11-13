@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-interface INewQuoteButton {handleNewQuoteClick: (e: React.MouseEvent<HTMLElement>) => void}
+interface INewQuoteButton {readonly handleNewQuoteClick: (e: React.MouseEvent<HTMLElement>) => void}
 
 const NewQuoteButton: FC<INewQuoteButton> = ({handleNewQuoteClick}) => {  
   return (

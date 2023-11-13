@@ -16,12 +16,14 @@ const App = () => {
     "inspiring",
     "type1",
     "type2",
-  ]
+  ] as const;
 
-  const [quoteType, setQuoteType] = useState(() => options[0]);
+  type QuoteTypesUnion = (typeof options)[number];
+
+  const [quoteType, setQuoteType] = useState<QuoteTypesUnion>(() => options[0]);
   const [quote, setQuote] = useState(() => initialQuote)
 
-  const onOptionChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => setQuoteType(e.target.value);
+  const onOptionChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => setQuoteType(e.target.value as QuoteTypesUnion);
 
   const handleNewQuoteClick = () => fetchQuote(quoteType);
 

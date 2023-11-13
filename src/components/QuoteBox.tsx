@@ -1,8 +1,8 @@
 import { FC } from "react";
 
 interface IQuoteBox {
-  quoteText: string,
-  quoteAuthor: string
+  readonly quoteText: string,
+  readonly quoteAuthor: string
 }
 
 const QuoteBox: FC<IQuoteBox> = ({quoteText, quoteAuthor}) => {
