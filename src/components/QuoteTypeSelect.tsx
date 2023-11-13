@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-interface QT {  
+interface IQuoteTypeSelect {  
   onOptionChangeHandler: (e: React.ChangeEvent<HTMLSelectElement>) => void,
   options: string[],
 }
 
-const QuoteType: FC<QT> = ({onOptionChangeHandler, options}) => {
+const QuoteTypeSelect: FC<IQuoteTypeSelect> = ({onOptionChangeHandler, options}) => {
   return (
     <select name="select" onChange={onOptionChangeHandler}>
       {options.map((option, idx) => <option key={idx}>{option}</option>)}
@@ -13,4 +13,4 @@ const QuoteType: FC<QT> = ({onOptionChangeHandler, options}) => {
   )
 }
 
-export default QuoteType;
+export default QuoteTypeSelect;

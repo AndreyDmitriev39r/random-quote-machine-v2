@@ -1,24 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import QuoteType from "./components/QuoteType";
 import QuoteBox from "./components/QuoteBox";
-import NewQuote from "./components/NewQuote";
+import QuoteTypeSelect from "./components/QuoteTypeSelect";
+import NewQuoteButton from "./components/NewQuoteButton";
 
-const App = () => {
+const App = () => {  
 
-  const options = [
-    "random quote",
-    "inspiring",
-    "type2 quote"
-  ];
-
-  const intialQuote = {
+  const initialQuote = {
     text: "some initial text",
     author: "poor silly me"
   }
 
+  const options = [
+    "random",
+    "inspiring",
+    "type1",
+    "type2",
+  ]
+
   const [quoteType, setQuoteType] = useState(() => options[0]);
-  const [quote, setQuote] = useState(() => intialQuote)
+  const [quote, setQuote] = useState(() => initialQuote)
 
   const onOptionChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => setQuoteType(e.target.value);
 
@@ -40,11 +41,11 @@ const App = () => {
         quoteAuthor={quote.author}
       />
       <div className="flex flex-row">
-        <QuoteType          
+        <QuoteTypeSelect         
           onOptionChangeHandler={onOptionChangeHandler}
           options={options}
         />
-        <NewQuote handleNewQuoteClick={handleNewQuoteClick}/>
+        <NewQuoteButton handleNewQuoteClick={handleNewQuoteClick}/>
       </div>
     </div>
   )

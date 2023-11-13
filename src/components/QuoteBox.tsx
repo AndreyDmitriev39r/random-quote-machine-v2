@@ -1,11 +1,11 @@
 import { FC } from "react";
 
-interface QB {
+interface IQuoteBox {
   quoteText: string,
   quoteAuthor: string
 }
 
-const QuoteBox: FC<QB> = ({quoteText, quoteAuthor}) => {
+const QuoteBox: FC<IQuoteBox> = ({quoteText, quoteAuthor}) => {
   return (
     <div className="flex-col gap-2">
       <p>{quoteText}</p>
