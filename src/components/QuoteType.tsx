@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 const QuoteType = () => {
   const options = [
-    "random quote",
+    "Random Quote",
     "type1 quote",
     "type2 quote"
   ];
@@ -11,7 +11,8 @@ const QuoteType = () => {
   const onOptionChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => setQuoteType(e.target.value);
 
   return (
-    <select name="select" onChange={onOptionChangeHandler}>
+    <select className="border-2 border-black text-black font-normal py-2 px-10 rounded bg-transparent justify-between" 
+    name="select" onChange={onOptionChangeHandler}>
       {options.map((option, idx) => <option key={idx}>{option}</option>)}
     </select>
   )
