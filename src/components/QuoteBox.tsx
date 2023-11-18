@@ -8,10 +8,10 @@ interface IQuoteBox {
 const QuoteBox: FC<IQuoteBox> = ({quoteText, quoteAuthor}) => {
   return (
     <div className="flex-col gap-2">
-      <p>{quoteText}</p>
-      <p>{quoteAuthor}</p>
+      <p className="font-normal text-4xl text-center text-gray-50">{quoteText}</p>
+      <p className="font-light text-2xl text-right pt-7 text-gray-300">{quoteAuthor}</p>
     </div>
   )
 }
 
-export default QuoteBox
+export default QuoteBox;

@@ -56,17 +56,17 @@ const App = () => {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col py-10 px-20 m-4 rounded-md shadow-xl bg-gradient-to-r from-gray-50/30 to-gray-600/60 font-inter">
       <QuoteBox
         quoteText={quote.text}
         quoteAuthor={quote.author}
       />
-      <div className="flex flex-row">
-        <QuoteTypeSelect         
-          onOptionChangeHandler={onOptionChangeHandler}
-          options={options}
-        />
-        <NewQuoteButton handleNewQuoteClick={handleNewQuoteClick}/>        
+      <div className="flex flex-row justify-evenly pt-10">
+      <QuoteTypeSelect         
+      onOptionChangeHandler={onOptionChangeHandler}
+      options={options}
+      /> 
+      <NewQuoteButton handleNewQuoteClick={handleNewQuoteClick}/>       
       </div>
     </div>
   )
