@@ -1,8 +1,15 @@
-const QuoteBox = () => {
+import { FC } from "react";
+
+interface IQuoteBox {
+  readonly quoteText: string,
+  readonly quoteAuthor: string
+}
+
+const QuoteBox: FC<IQuoteBox> = ({quoteText, quoteAuthor}) => {
   return (
     <div className="flex-col gap-2">
-      <p>Quote will go here</p>
-      <p>Author's name will go here</p>
+      <p>{quoteText}</p>
+      <p>{quoteAuthor}</p>
     </div>
   )
 }
