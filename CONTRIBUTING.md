@@ -133,11 +133,6 @@ When you're finished with the changes, create a pull request, also known as a PR
 - As you update your PR and apply changes, mark each conversation as [resolved](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations).
 - If you run into any merge issues, checkout this [git tutorial](https://github.com/skills/resolve-merge-conflicts) to help you resolve merge conflicts and other issues.
 
-### Still a little bit lost?
-
-- Check out [this video](https://www.youtube.com/watch?v=RGOj5yH7evk) from freeCodeCamp's YouTube channel on Git and GitHub basics.
-- Don't be shy to ask us about anything related to the project and working on it. Depending on your question, use pull request threads, issue threads or the discussions.
-
 ## General API usage information
 
 - An API used for fetching inspirational quotes, is [api-ninjas](https://api-ninjas.com/api/quotes).
@@ -158,3 +153,8 @@ Vite used for development environment.
 In Vite, you can use environment variables to configure your application. Vite exposes environment variables on the special `import.meta.env` object. Some built-in variables are available in all cases.
 
 Please, get familiar with [Env Variables](https://vitejs.dev/guide/env-and-mode.html) and how to properly use them.
+
+### Still a little bit lost?
+
+- Check out [this video](https://www.youtube.com/watch?v=RGOj5yH7evk) from freeCodeCamp's YouTube channel on Git and GitHub basics.
+- Don't be shy to ask us about anything related to the project and working on it. Depending on your question, use pull request threads, issue threads or the discussions.
