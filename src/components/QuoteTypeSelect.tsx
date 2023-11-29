@@ -7,7 +7,7 @@ interface IQuoteTypeSelect {
 
 const QuoteTypeSelect: FC<IQuoteTypeSelect> = ({onOptionChangeHandler, options}) => {
   return (
-    <select name="select"  className="border-2 border-black text-black font-normal py-2 px-10 rounded bg-transparent justify-between" onChange={onOptionChangeHandler}>
+    <select name="select"  className="border-2 border-black text-black font-normal py-2 px-10 rounded bg-transparent appearance-none" onChange={onOptionChangeHandler}>
       {options.map((option, idx) => <option key={idx}>{option}</option>)}
     </select>
   )
