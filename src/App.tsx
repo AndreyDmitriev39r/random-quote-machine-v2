@@ -74,12 +74,12 @@ const App = () => {
   }
 
   return (
-    <div className="flex flex-col py-10 px-20 m-4 rounded-md shadow-xl bg-gradient-to-r from-gray-50/30 to-gray-600/60 font-inter">
+    <div className="flex flex-col py-10 px-20 m-4 rounded-md shadow-xl bg-gradient-to-r from-gray-50/30 to-gray-600/60 font-inter max-w-lg">
       <QuoteBox
         quoteText={quote.text}
         quoteAuthor={quote.author}
       />
-      <div className="flex flex-row justify-evenly pt-10">
+      <div className="flex flex-row flex-wrap justify-center pt-10 gap-x-4 gap-y-5">
       <QuoteTypeSelect         
       onOptionChangeHandler={onOptionChangeHandler}
       options={options}
