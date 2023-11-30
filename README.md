@@ -11,8 +11,7 @@ React application with functionality similar to freeCodeCamp front-end certifica
 ### Tools
 
 * Vite for development environment.
-* React for creating dynamic interface:
-   * useReducer for state management (irrelevant in terms of project size, used solely for practice).
+* React for creating dynamic interface.
 * Typescript for type safety.
 * Axios for interaction with external API.
 * TailwindCSS for basic styling.

@@ -133,6 +133,27 @@ When you're finished with the changes, create a pull request, also known as a PR
 - As you update your PR and apply changes, mark each conversation as [resolved](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations).
 - If you run into any merge issues, checkout this [git tutorial](https://github.com/skills/resolve-merge-conflicts) to help you resolve merge conflicts and other issues.
 
+## General API usage information
+
+- An API used for fetching inspirational quotes, is [api-ninjas](https://api-ninjas.com/api/quotes).
+- Axios used for all interactions with an API.
+- An API key is needed to authenticate requests made to an API.
+
+### Where to look for an API key? 
+
+- First, you will need to create an account with Api-ninjas by following instructions here -> [register](https://api-ninjas.com/register).
+- Then, you will be able to find API key under the **API Statistics** tab on your profile page once you log in. Simply click the **Show API Key** button to see your API key.
+
+For more in depth information follow the [link](https://api-ninjas.com/faq).
+
+## Environment variables in Vite
+
+Vite used for development environment.
+
+In Vite, you can use environment variables to configure your application. Vite exposes environment variables on the special `import.meta.env` object. Some built-in variables are available in all cases.
+
+Please, get familiar with [Env Variables](https://vitejs.dev/guide/env-and-mode.html) and how to properly use them.
+
 ### Still a little bit lost?
 
 - Check out [this video](https://www.youtube.com/watch?v=RGOj5yH7evk) from freeCodeCamp's YouTube channel on Git and GitHub basics.
